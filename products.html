@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Nursery - Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>🌿 Paradise Nursery</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="products-page">
+        <div class="page-header">
+            <h2>Our Plant Collection</h2>
+            <p>Choose from our wide variety of aromatic and medicinal plants</p>
+        </div>
+
+        <!-- Aromatic Plants Section -->
+        <section class="plant-section">
+            <h3 class="section-title">🌸 Aromatic Plants</h3>
+            <div class="products-grid" id="aromatic-plants">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Medicinal Plants Section -->
+        <section class="plant-section">
+            <h3 class="section-title">🌿 Medicinal Plants</h3>
+            <div class="products-grid" id="medicinal-plants">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Paradise Nursery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load products when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProducts();
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
+
